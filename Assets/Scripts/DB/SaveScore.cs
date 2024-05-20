@@ -16,6 +16,8 @@ public class SaveScore : MonoBehaviour
     [SerializeField]
     private GameObject scoreTooLowErrorCanvas;
     [SerializeField]
+    private GameObject scoreSavedSuccessCanvas;
+    [SerializeField]
     private TMP_InputField username;
     [SerializeField]
     private TMP_Text score;
@@ -90,6 +92,7 @@ public class SaveScore : MonoBehaviour
         else
         {
             ScoreSaveSuccessEvent.Invoke();
+            scoreSavedSuccessCanvas.SetActive(true );
             Debug.Log("Received: " + uwr.downloadHandler.text);
         }
     }

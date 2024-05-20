@@ -12,6 +12,8 @@ public class Shoot : MonoBehaviour
     [SerializeField]
     private UnityEvent ShootEvent;
     [SerializeField]
+    private UnityEvent BulletSpawnedEvent;
+    [SerializeField]
     private UnityEvent ShootStopEvent;
 
     [Header("Shoot Settings")]
@@ -55,6 +57,7 @@ public class Shoot : MonoBehaviour
     {
         while (true) 
         {
+            BulletSpawnedEvent.Invoke();
             bulletSpawner._pool.Get();
             yield return fireWait;
         }

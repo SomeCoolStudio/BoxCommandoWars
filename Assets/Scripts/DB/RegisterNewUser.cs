@@ -16,6 +16,8 @@ public class RegisterNewUser : MonoBehaviour
     [SerializeField]
     private GameObject connectionErrorCanvas;
     [SerializeField]
+    private GameObject registerSuccessCanvas;
+    [SerializeField]
     private TMP_InputField username;
     [SerializeField]
     private TMP_InputField email;
@@ -98,6 +100,7 @@ public class RegisterNewUser : MonoBehaviour
       
         else
         {
+            registerSuccessCanvas.SetActive(true);
             RegisterSuccessEvent.Invoke();
             Debug.Log("Received: " + uwr.downloadHandler.text);
         }
