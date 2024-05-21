@@ -68,7 +68,7 @@ public class RegisterNewUser : MonoBehaviour
         gamer.password = password;
 
         string json = JsonUtility.ToJson(gamer);
-        StartCoroutine(PostRequest("http://127.0.0.1:5000/register", json));
+        StartCoroutine(PostRequest("https://box-commando-flask-deploy.onrender.com/register", json));
     }
 
     public void ClearRegisterFields()

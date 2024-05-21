@@ -59,7 +59,7 @@ public class GetLeaderboardData : MonoBehaviour
 
     public void GetData()
     {
-        StartCoroutine(GetRequest("http://127.0.0.1:5000/scoreboard/1"));
+        StartCoroutine(GetRequest("https://box-commando-flask-deploy.onrender.com/scoreboard/1"));
     }
 
     IEnumerator GetRequest(string uri)

@@ -44,7 +44,7 @@ public class LoginUser : MonoBehaviour
         gamer.password = password;
 
         string json = JsonUtility.ToJson(gamer);
-        StartCoroutine(PostRequest("http://127.0.0.1:5000/login", json));
+        StartCoroutine(PostRequest("https://box-commando-flask-deploy.onrender.com/login", json));
     }
 
     IEnumerator PostRequest(string url, string json)

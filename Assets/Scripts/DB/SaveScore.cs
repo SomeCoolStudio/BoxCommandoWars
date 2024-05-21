@@ -56,7 +56,7 @@ public class SaveScore : MonoBehaviour
        
 
         string json = JsonUtility.ToJson(gamer);
-        StartCoroutine(PutRequest("http://127.0.0.1:5000/scoreboard/1", json));
+        StartCoroutine(PutRequest("https://box-commando-flask-deploy.onrender.com/scoreboard/1", json));
     }
 
     public void ClearUsernameField()
